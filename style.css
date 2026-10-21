@@ -1,0 +1,1157 @@
+/* ===========================================
+            RESET
+=========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+    min-height:100vh;
+
+    overflow-x:hidden;
+
+    color:#3f235f;
+
+    background:
+    linear-gradient(
+        135deg,
+        #f7efff 0%,
+        #ecd7ff 45%,
+        #fff4c7 100%
+    );
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:50px 20px;
+
+    position:relative;
+
+}
+
+/* ===========================================
+        BOLHAS DO FUNDO
+=========================================== */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    width:600px;
+    height:600px;
+
+    border-radius:50%;
+
+    background:
+
+    radial-gradient(
+
+        rgba(255,255,255,.65),
+
+        transparent 70%
+
+    );
+
+    top:-220px;
+    left:-200px;
+
+    filter:blur(30px);
+
+    z-index:-2;
+
+}
+
+body::after{
+
+    content:"";
+
+    position:fixed;
+
+    width:500px;
+    height:500px;
+
+    border-radius:50%;
+
+    background:
+
+    radial-gradient(
+
+        rgba(255,235,150,.45),
+
+        transparent 70%
+
+    );
+
+    bottom:-180px;
+    right:-150px;
+
+    filter:blur(35px);
+
+    z-index:-2;
+
+}
+
+/* ===========================================
+        FLORES DECORATIVAS
+=========================================== */
+
+.flower{
+
+    position:fixed;
+
+    user-select:none;
+
+    pointer-events:none;
+
+    animation:float 6s ease-in-out infinite;
+
+    opacity:.18;
+
+    z-index:-1;
+
+}
+
+.flower1{
+
+    font-size:95px;
+
+    top:40px;
+
+    left:45px;
+
+}
+
+.flower2{
+
+    font-size:110px;
+
+    bottom:40px;
+
+    right:45px;
+
+    animation-delay:2s;
+
+}
+
+.flower3{
+
+    top:140px;
+
+    right:120px;
+
+    font-size:45px;
+
+    animation-delay:1s;
+
+}
+
+.flower4{
+
+    left:90px;
+
+    bottom:160px;
+
+    font-size:40px;
+
+    animation-delay:3s;
+
+}
+
+/* ===========================================
+            CONTAINER
+=========================================== */
+
+.container{
+
+    width:100%;
+
+    max-width:980px;
+
+    border-radius:35px;
+
+    padding:45px;
+
+    backdrop-filter:blur(20px);
+
+    background:
+
+    rgba(255,255,255,.42);
+
+    border:
+
+    1px solid
+
+    rgba(255,255,255,.55);
+
+    box-shadow:
+
+    0 20px 60px
+
+    rgba(98,63,151,.18);
+
+}
+
+/* ===========================================
+            CABEÇALHO
+=========================================== */
+
+.header{
+
+    text-align:center;
+
+    margin-bottom:40px;
+
+}
+
+.header h1{
+
+    font-size:52px;
+
+    color:#59238e;
+
+    margin-bottom:10px;
+
+    font-weight:700;
+
+}
+
+.header p{
+
+    font-size:23px;
+
+    color:#7f45be;
+
+    margin-bottom:12px;
+
+}
+
+#dataAtual{
+
+    display:inline-block;
+
+    padding:10px 20px;
+
+    background:
+
+    rgba(255,255,255,.55);
+
+    border-radius:999px;
+
+    font-size:15px;
+
+    color:#5e3b93;
+
+}
+
+/* ===========================================
+        PRIMEIRA LINHA
+=========================================== */
+
+.cards-top{
+
+    display:grid;
+
+    grid-template-columns:
+
+    repeat(2,1fr);
+
+    gap:22px;
+
+    margin-bottom:35px;
+
+}
+
+/* ===========================================
+            CARD PADRÃO
+=========================================== */
+
+.card{
+
+    background:
+
+    rgba(255,255,255,.50);
+
+    border-radius:28px;
+
+    padding:28px;
+
+    transition:.35s;
+
+    border:
+
+    1px solid
+
+    rgba(255,255,255,.65);
+
+    box-shadow:
+
+    0 8px 30px
+
+    rgba(120,74,187,.10);
+
+}
+
+.card:hover{
+
+    transform:
+
+    translateY(-6px);
+
+    box-shadow:
+
+    0 20px 45px
+
+    rgba(120,74,187,.18);
+
+}
+
+.card h3{
+
+    color:#6f2fc5;
+
+    font-size:18px;
+
+    margin-bottom:18px;
+
+}
+
+.numero{
+
+    font-size:68px;
+
+    font-weight:bold;
+
+    color:#4f2482;
+
+    margin-bottom:8px;
+
+}
+
+.texto-grande{
+
+    font-size:34px;
+
+    color:#572d96;
+
+    font-weight:700;
+
+    margin-bottom:10px;
+
+}
+
+.card small{
+
+    color:#8667ad;
+
+}
+
+/* ===========================================
+            ANIMAÇÃO
+=========================================== */
+
+@keyframes float{
+
+    0%{
+
+        transform:
+        translateY(0px);
+
+    }
+
+    50%{
+
+        transform:
+        translateY(-12px);
+
+    }
+
+    100%{
+
+        transform:
+        translateY(0px);
+
+    }
+
+}
+
+/* ===========================================
+            CONTADOR
+=========================================== */
+
+.contador{
+
+    background:
+    rgba(255,255,255,.45);
+
+    border-radius:32px;
+
+    padding:35px;
+
+    margin-bottom:25px;
+
+    text-align:center;
+
+    border:
+    1px solid rgba(255,255,255,.6);
+
+    box-shadow:
+    0 10px 35px rgba(90,45,140,.12);
+
+}
+
+
+.contador h2{
+
+    color:#6525a8;
+
+    font-size:24px;
+
+    margin-bottom:30px;
+
+}
+
+
+/* TIMER */
+
+.timer{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:20px;
+
+}
+
+
+.timer-box{
+
+    background:
+
+    linear-gradient(
+        145deg,
+        rgba(255,255,255,.8),
+        rgba(245,230,255,.7)
+    );
+
+
+    padding:30px 20px;
+
+    border-radius:25px;
+
+    box-shadow:
+
+    inset 0 0 20px rgba(255,255,255,.7),
+
+    0 10px 25px rgba(100,50,160,.12);
+
+    transition:.3s;
+
+}
+
+
+.timer-box:hover{
+
+    transform:
+    translateY(-5px);
+
+}
+
+
+.timer-box span{
+
+    display:block;
+
+    font-size:55px;
+
+    font-weight:800;
+
+    color:#57208e;
+
+}
+
+
+.timer-box label{
+
+    font-size:16px;
+
+    color:#8a62b5;
+
+}
+
+
+/* ===========================================
+        BARRAS DE PROGRESSO
+=========================================== */
+
+
+.progresso-card{
+
+    margin-bottom:25px;
+
+}
+
+
+.titulo{
+
+    font-size:20px;
+
+    font-weight:700;
+
+    color:#61249c;
+
+    margin-bottom:20px;
+
+}
+
+
+.barra{
+
+    width:100%;
+
+    height:28px;
+
+    background:
+
+    rgba(255,255,255,.55);
+
+    border-radius:50px;
+
+    overflow:hidden;
+
+    padding:4px;
+
+}
+
+
+.barraInterna{
+
+    height:100%;
+
+    width:0%;
+
+    border-radius:50px;
+
+    background:
+
+    linear-gradient(
+        90deg,
+        #facc15,
+        #f59e0b
+    );
+
+    transition:
+
+    width 1s ease;
+
+}
+
+
+.barraInternaMes{
+
+    height:100%;
+
+    width:0%;
+
+    border-radius:50px;
+
+    background:
+
+    linear-gradient(
+        90deg,
+        #9333ea,
+        #c084fc
+    );
+
+
+    transition:
+
+    width 1s ease;
+
+}
+
+
+
+.porcentagem{
+
+    text-align:right;
+
+    margin-top:12px;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    color:#61249c;
+
+}
+
+
+/* ===========================================
+        MENSAGEM DO DIA
+=========================================== */
+
+
+.mensagem-card{
+
+    margin-top:30px;
+
+    padding:35px;
+
+    border-radius:32px;
+
+
+    background:
+
+    linear-gradient(
+        135deg,
+        rgba(233,213,255,.75),
+        rgba(254,243,199,.75)
+    );
+
+
+    border:
+
+    1px solid rgba(255,255,255,.6);
+
+
+    box-shadow:
+
+    0 15px 35px rgba(100,50,160,.12);
+
+    text-align:center;
+
+}
+
+
+.mensagem-card h2{
+
+    color:#60239d;
+
+    font-size:28px;
+
+    margin-bottom:20px;
+
+}
+
+
+.mensagem-card p{
+
+    color:#543078;
+
+    font-size:20px;
+
+    line-height:1.8;
+
+}
+
+
+/* ===========================================
+        CURIOSIDADE
+=========================================== */
+
+
+.curiosidade{
+
+    margin-top:25px;
+
+    background:
+
+    rgba(255,255,255,.45);
+
+
+    border-radius:25px;
+
+
+    padding:25px;
+
+
+    text-align:center;
+
+
+    border:
+
+    1px solid rgba(255,255,255,.6);
+
+}
+
+
+.curiosidade h3{
+
+    color:#6b28b9;
+
+    margin-bottom:12px;
+
+}
+
+
+.curiosidade p{
+
+    color:#73569b;
+
+    font-size:17px;
+
+}
+
+
+/* ===========================================
+        FOOTER
+=========================================== */
+
+
+footer{
+
+    text-align:center;
+
+    margin-top:35px;
+
+    color:#8054ad;
+
+    font-size:18px;
+
+    opacity:.85;
+
+}
+
+/* ===========================================
+        EFEITOS FINAIS
+=========================================== */
+
+
+/* Brilho suave nos cards */
+
+.card,
+.contador,
+.mensagem-card,
+.curiosidade{
+
+    animation:
+
+    aparecer .8s ease forwards;
+
+}
+
+
+@keyframes aparecer{
+
+    from{
+
+        opacity:0;
+
+        transform:
+        translateY(25px);
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translateY(0);
+
+    }
+
+}
+
+
+/* ===========================================
+        EFEITO DE BRILHO
+=========================================== */
+
+
+.header h1{
+
+    animation:
+
+    brilho 3s infinite;
+
+}
+
+
+@keyframes brilho{
+
+
+    0%{
+
+        text-shadow:
+        0 0 0 transparent;
+
+    }
+
+
+    50%{
+
+        text-shadow:
+
+        0 0 20px
+
+        rgba(168,85,247,.45);
+
+    }
+
+
+    100%{
+
+        text-shadow:
+        0 0 0 transparent;
+
+    }
+
+
+}
+
+
+/* ===========================================
+        HOVER DOS TIMER
+=========================================== */
+
+
+.timer-box{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+.timer-box::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:120px;
+
+    height:120px;
+
+    background:
+
+    rgba(255,255,255,.45);
+
+
+    border-radius:50%;
+
+
+    top:-60px;
+
+    right:-60px;
+
+
+    transition:.4s;
+
+}
+
+
+.timer-box:hover::before{
+
+    transform:
+
+    scale(2);
+
+}
+
+
+
+/* ===========================================
+        DESTAQUE PROGRESSO
+=========================================== */
+
+
+.barraInterna,
+.barraInternaMes{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+.barraInterna::after,
+.barraInternaMes::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-100%;
+
+    width:100%;
+
+    height:100%;
+
+
+    background:
+
+    linear-gradient(
+
+        120deg,
+
+        transparent,
+
+        rgba(255,255,255,.7),
+
+        transparent
+
+    );
+
+
+    animation:
+
+    passarBrilho 2.5s infinite;
+
+}
+
+
+
+@keyframes passarBrilho{
+
+
+    from{
+
+        left:-100%;
+
+    }
+
+
+    to{
+
+        left:100%;
+
+    }
+
+}
+
+
+
+/* ===========================================
+        RESPONSIVIDADE TABLET
+=========================================== */
+
+
+@media(max-width:900px){
+
+
+    .container{
+
+        padding:35px 25px;
+
+    }
+
+
+    .header h1{
+
+        font-size:42px;
+
+    }
+
+
+    .numero{
+
+        font-size:55px;
+
+    }
+
+
+}
+
+
+
+/* ===========================================
+        RESPONSIVIDADE CELULAR
+=========================================== */
+
+
+@media(max-width:650px){
+
+
+    body{
+
+        padding:
+
+        25px 12px;
+
+        align-items:flex-start;
+
+    }
+
+
+
+    .container{
+
+        padding:
+
+        25px 15px;
+
+        border-radius:25px;
+
+    }
+
+
+
+    .header h1{
+
+        font-size:34px;
+
+    }
+
+
+
+    .header p{
+
+        font-size:18px;
+
+    }
+
+
+
+    .cards-top{
+
+        grid-template-columns:
+
+        1fr;
+
+    }
+
+
+
+    .timer{
+
+        grid-template-columns:
+
+        1fr;
+
+    }
+
+
+
+    .timer-box{
+
+        padding:25px;
+
+    }
+
+
+
+    .timer-box span{
+
+        font-size:45px;
+
+    }
+
+
+
+    .mensagem-card{
+
+        padding:25px 18px;
+
+    }
+
+
+
+    .mensagem-card h2{
+
+        font-size:23px;
+
+    }
+
+
+
+    .mensagem-card p{
+
+        font-size:17px;
+
+    }
+
+
+
+    .flower1{
+
+        font-size:60px;
+
+        left:10px;
+
+    }
+
+
+
+    .flower2{
+
+        font-size:65px;
+
+        right:10px;
+
+    }
+
+
+}
+
+
+
+/* ===========================================
+        CELULAR PEQUENO
+=========================================== */
+
+
+@media(max-width:400px){
+
+
+    .header h1{
+
+        font-size:30px;
+
+    }
+
+
+    .numero{
+
+        font-size:45px;
+
+    }
+
+
+    .timer-box span{
+
+        font-size:38px;
+
+    }
+
+
+}
+
+
+
+/* ===========================================
+        SELEÇÃO DE TEXTO
+=========================================== */
+
+
+::selection{
+
+    background:#c084fc;
+
+    color:white;
+
+}
